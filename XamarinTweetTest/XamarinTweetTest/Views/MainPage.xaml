@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinTweetTest.Views.MainPage"
+             Title="MainPage">
+
+    <!--ミニマムコードのボタンのみを配置-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+        <Button Text="Hello Twitter"
+                Command="{Binding SendHelloTweetCommand}"
+        />
+        <Entry Placeholder="自由に呟こうぜ"
+               Text="{Binding TweetContents}"
+        />
+        <Button Text="ついーと"
+                Command="{Binding SendTweetCommand}"
+        />
+        <Button Text="リツイート"
+                Command="{Binding RetweetCommand}"
+        />
+        <Button Text="リツイートを取り消す"
+                Command="{Binding UnRetweetCommand}"
+        />
+        <Button Text="ふぁぼ(いいね)"
+                Command="{Binding FavoriteCommand}"
+        />
+        <Button Text="ふぁぼ(いいね)を取り消す"
+                Command="{Binding UnFavoriteCommand}"
+        />
+
+    </StackLayout>
+
+</ContentPage>
